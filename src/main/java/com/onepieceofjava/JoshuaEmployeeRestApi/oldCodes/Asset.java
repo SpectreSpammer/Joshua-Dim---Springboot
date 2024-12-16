@@ -1,36 +1,14 @@
-package com.onepieceofjava.JoshuaEmployeeRestApi.model;
-
-import jakarta.persistence.*;
-
+package com.onepieceofjava.JoshuaEmployeeRestApi.oldCodes;
 
 import com.onepieceofjava.JoshuaEmployeeRestApi.model.Employee;
 
-
-@Entity
-@Table(name = "assets")
 public class Asset {
 
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "asset_gen")
-    @SequenceGenerator(
-            name = "asset_seq",
-            sequenceName = "asset_sequence",
-            initialValue = 2001,
-            allocationSize = 1
-    )
     private Long id;
     private String brand;
     private String model;
     private String type;
     private String serialNumber;
-
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
-
-    public Asset() {
-    }
 
     public Asset(Long id, String brand, String model, String type, String serialNumber) {
         this.id = id;
@@ -80,7 +58,5 @@ public class Asset {
         this.serialNumber = serialNumber;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+
 }

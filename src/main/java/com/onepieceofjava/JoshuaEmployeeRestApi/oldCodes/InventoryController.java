@@ -1,8 +1,6 @@
-package com.onepieceofjava.JoshuaEmployeeRestApi.controller;
+package com.onepieceofjava.JoshuaEmployeeRestApi.oldCodes;
 
 
-import com.onepieceofjava.JoshuaEmployeeRestApi.model.Asset;
-import com.onepieceofjava.JoshuaEmployeeRestApi.model.Employee;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -76,4 +74,35 @@ public class InventoryController {
     }
 
     //ASSET
+    //localhost:8080/api/inventory/employees/
+    @GetMapping("/assets")
+    public List<Asset> getAllAssets(){
+        return assetList;
+    }
+
+
+    @GetMapping("/assets/{id}")
+    public Asset getAssetById(@PathVariable Long id){
+        return assetList.stream()
+                .filter(asset -> asset.getId()
+                        .equals(id))
+                .findFirst().orElse(null);
+
+    }
+
+    @PostMapping("/assets")
+    public Asset addAsset(@RequestBody Asset asset){
+        asset.setId(employeeId);
+        assetList.add(asset);
+
+        return asset;
+
+    }
+
+    @DeleteMapping("/assets/{id}")
+    public void deleteAssetById(@PathVariable Long id){
+        assetList.removeIf(asset -> asset.getId().equals(id));
+    }
+
+
 }
