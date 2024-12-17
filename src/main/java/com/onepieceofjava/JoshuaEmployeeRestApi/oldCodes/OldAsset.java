@@ -1,8 +1,6 @@
 package com.onepieceofjava.JoshuaEmployeeRestApi.oldCodes;
 
-import com.onepieceofjava.JoshuaEmployeeRestApi.model.Employee;
-
-public class Asset {
+public class OldAsset {
 
     private Long id;
     private String brand;
@@ -10,7 +8,7 @@ public class Asset {
     private String type;
     private String serialNumber;
 
-    public Asset(Long id, String brand, String model, String type, String serialNumber) {
+    public OldAsset(Long id, String brand, String model, String type, String serialNumber) {
         this.id = id;
         this.brand = brand;
         this.model = model;

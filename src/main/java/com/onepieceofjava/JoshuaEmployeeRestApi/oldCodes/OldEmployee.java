@@ -3,18 +3,18 @@ package com.onepieceofjava.JoshuaEmployeeRestApi.oldCodes;
 
 import java.util.List;
 
-public class Employee {
+public class OldEmployee {
 
     private Long id;
     private String name;
     private String dept;
-    private List<Asset> assets;
+    private List<OldAsset> oldAssets;
 
-    public Employee(Long id, String name, String dept, List<Asset> assets) {
+    public OldEmployee(Long id, String name, String dept, List<OldAsset> oldAssets) {
         this.id = id;
         this.name = name;
         this.dept = dept;
-        this.assets = assets;
+        this.oldAssets = oldAssets;
     }
 
     public Long getId() {
@@ -41,23 +41,23 @@ public class Employee {
         this.dept = dept;
     }
 
-    public List<Asset> getAssets() {
-        return assets;
+    public List<OldAsset> getAssets() {
+        return oldAssets;
     }
 
-    public void setAssets(List<Asset> assets) {
-        this.assets = assets;
+    public void setAssets(List<OldAsset> oldAssets) {
+        this.oldAssets = oldAssets;
     }
 
-    public void setAsset(List<Asset> assets){
-        this.assets = assets;
+    public void setAsset(List<OldAsset> oldAssets){
+        this.oldAssets = oldAssets;
     }
 
-    public void addAsset(Asset asset){
-        this.assets.add(asset);
+    public void addAsset(OldAsset oldAsset){
+        this.oldAssets.add(oldAsset);
     }
 
-    public void removeAsset(Asset asset){
-        this.assets.remove(asset);
+    public void removeAsset(OldAsset oldAsset){
+        this.oldAssets.remove(oldAsset);
     }
 }

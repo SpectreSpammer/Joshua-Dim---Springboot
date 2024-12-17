@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 		"com.onepieceofjava.JoshuaEmployeeRestApi.repository"
 })
 @EntityScan("com.onepieceofjava.JoshuaEmployeeRestApi.model")
-@EnableJpaRepositories("com.onepieceofjava.JoshuaEmployeeRestApi.model")
+@EnableJpaRepositories("com.onepieceofjava.JoshuaEmployeeRestApi.repository")
 public class JoshuaEmployeeRestApiApplication {
 
 	public static void main(String[] args) {
